@@ -1,0 +1,60 @@
+$secondary-background: #f7e4d0;
+$primary-color: #0047ff;
+$hover-color: rgb(0, 56.8, 204);
+$container-width: 1200px;
+$font-size-banner-h1: 30px;
+$font-size-banner-p: 16px;
+
+.banner {
+  background-color: $secondary-background;
+  border-radius: 15px;
+  margin: 50px auto;
+  padding: 40px;
+  max-width: 90%;
+
+  .container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Ajoute un espace entre le texte et l'image */
+    flex-wrap: wrap; /* Permet de s'assurer que les éléments ne se chevauchent pas sur de petits écrans */
+  }
+
+  .banner-text {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Change align-items: right à flex-start pour aligner à gauche */
+
+    h1 {
+      font-size: $font-size-banner-h1;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 10px 0 20px;
+      font-size: $font-size-banner-p;
+    }
+
+    .explore-now {
+      background-color: $primary-color;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+
+  .banner-image {
+    max-width: 45%;
+    border-radius: 8px;
+  }
+}
